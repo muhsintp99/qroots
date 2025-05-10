@@ -1,0 +1,98 @@
+[
+    {
+        "id": "interview-prep",
+        "title": "Job Interview Preparation",
+        "shortDescription": "Personalized coaching, mock interviews, and scenario-based practice to help you crack your next medical job interview.",
+        "image": "./assets/img/services/interview-prep.jpg",
+        "detailImage": "assets/img/services/interview-detail.jpg",
+        "fullDescription": "Our comprehensive interview preparation service equips medical professionals with the confidence and skills needed to excel in any healthcare interview setting.",
+        "features": [
+            "Tailored mock interviews specific to medical specialties",
+            "Scenario-based clinical questions practice",
+            "Professional feedback with video recording analysis",
+            "Specialty-specific question preparation",
+            "Body language and presentation coaching"
+        ],
+        "additionalInfo": "Our expert coaches, with years of healthcare recruitment experience, provide insider knowledge on what hospitals and medical institutions look for in candidates."
+    },
+    {
+        "id": "career-consult",
+        "title": "Career Consultation",
+        "shortDescription": "One-on-one sessions to help you plan your career path — whether you're a new student or coming from another institute.",
+        "image": "./assets/img/services/career-consult.jpg",
+        "detailImage": "assets/img/services/career-detail.jpg",
+        "fullDescription": "Navigate the complex world of medical career paths with our personalized consultation services tailored to your unique skills, interests, and goals.",
+        "features": [
+            "One-on-one career planning sessions",
+            "Specialty selection guidance",
+            "Medical career roadmap development",
+            "Fellowship and advanced training options",
+            "Work-life balance strategy planning"
+        ],
+        "additionalInfo": "Whether you're just starting medical school or considering a specialty change, our consultations provide clarity and direction for your professional journey."
+    },
+    {
+        "id": "job-transition",
+        "title": "Job Transition Support",
+        "shortDescription": "Support for final-year students and fresh graduates to smoothly transition from academics to professional roles.",
+        "image": "./assets/img/services/job-transition.jpg",
+        "detailImage": "assets/img/services/transition-detail.jpg",
+        "fullDescription": "Bridge the gap between academic learning and professional practice with our comprehensive transition support for medical graduates and early-career professionals.",
+        "features": [
+            "First job application strategies",
+            "Hospital onboarding preparation",
+            "Professional network building",
+            "Mentorship pairing with established physicians",
+            "Clinical confidence development"
+        ],
+        "additionalInfo": "Our transition specialists help you navigate the challenging early years of medical practice with confidence and competence, setting you up for long-term career success."
+    },
+    {
+        "id": "cv-building",
+        "title": "CV & Resume Building",
+        "shortDescription": "Create a standout, ATS-friendly medical CV highlighting your training, skills, and achievements for job placement success.",
+        "image": "./assets/img/services/cv-building.jpg",
+        "detailImage": "assets/img/services/cv-detail.jpg",
+        "fullDescription": "Stand out from the competition with our professionally crafted medical CVs and resumes that highlight your unique qualifications and experiences.",
+        "features": [
+            "ATS-optimized medical resume creation",
+            "Academic CV formatting for clinical positions",
+            "Publication and research presentation",
+            "Clinical experience highlighting",
+            "Digital portfolio development"
+        ],
+        "additionalInfo": "Our CV specialists understand what healthcare employers look for and will help you create documents that effectively showcase your medical training, skills, and achievements."
+    },
+    {
+        "id": "communication",
+        "title": "Communication Training",
+        "shortDescription": "Improve your soft skills, patient interaction, and professional communication for interviews and clinical roles.",
+        "image": "./assets/img/services/communication.jpg",
+        "detailImage": "assets/img/services/communication-detail.jpg",
+        "fullDescription": "Master the art of effective medical communication with our specialized training programs designed for healthcare professionals.",
+        "features": [
+            "Patient-centered communication techniques",
+            "Difficult conversation handling for healthcare scenarios",
+            "Interprofessional team communication",
+            "Medical presentation skills development",
+            "Cultural competence in healthcare settings"
+        ],
+        "additionalInfo": "Our communication experts will help you develop the soft skills necessary for effective patient care, team collaboration, and career advancement in the medical field."
+    },
+    {
+        "id": "international",
+        "title": "International Placement",
+        "shortDescription": "Specialized guidance for medical professionals seeking opportunities abroad with visa support and cultural orientation.",
+        "image": "./assets/img/services/international.jpg",
+        "detailImage": "assets/img/services/international-detail.jpg",
+        "fullDescription": "Expand your medical career globally with our comprehensive international placement services tailored for healthcare professionals seeking opportunities abroad.",
+        "features": [
+            "International medical licensing guidance",
+            "Visa and immigration support",
+            "Hospital and institution matching worldwide",
+            "Cultural adaptation training",
+            "Relocation assistance for medical professionals"
+        ],
+        "additionalInfo": "Our global network of healthcare connections helps qualified medical professionals find rewarding opportunities in countries around the world while navigating the complex processes of international medical practice."
+    }
+]
