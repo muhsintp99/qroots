@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -50,7 +50,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -89,6 +89,42 @@
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
 
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const scrollTopBtn = document.querySelector('#scroll-top-btn');
+    const phoneBtn = document.querySelector('#phone-btn');
+    const whatsappBtn = document.querySelector('#whatsapp-btn');
+
+    // Toggle visibility based on scroll position
+    function toggleButtons() {
+      if (window.scrollY > 100) {
+        scrollTopBtn.classList.add('active');
+        phoneBtn.classList.add('active');
+        whatsappBtn.classList.add('active');
+      } else {
+        scrollTopBtn.classList.remove('active');
+        phoneBtn.classList.remove('active');
+        whatsappBtn.classList.remove('active');
+      }
+    }
+
+    // Initial check
+    toggleButtons();
+
+    // Scroll event
+    window.addEventListener('scroll', toggleButtons);
+
+    // Scroll to top functionality
+    scrollTopBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+
   /**
    * Animation on scroll function and init
    */
@@ -122,7 +158,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -140,7 +176,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
