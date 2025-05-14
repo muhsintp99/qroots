@@ -990,9 +990,20 @@ section,
   line-height: 56px;
 }
 
-.hero h1 span{
+.hero .hero-core {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  background: color-mix(in srgb, var(--accent-color), transparent 78%);
+  padding: 5px 16px;
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(0.9px);
+  border-radius: 15px;
+}
+
+.hero h1 span {
   color: var(--nav-dropdown-hover-color);
-  font-size: 58px;  
+  /* font-size: 58px; */
 }
 
 .hero-content {
