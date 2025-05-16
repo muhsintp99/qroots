@@ -161,15 +161,23 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 40px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
 }
 
 @media (max-width: 480px) {
+  .header {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 8px 0;
+    transition: all 0.5s;
+    z-index: 997;
+  }
+
   .header .logo img {
-    max-height: 24px;
+    max-height: 38px;
   }
 
   .header .logo h1 {
@@ -966,6 +974,85 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  /* Added drop shadow to the image */
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.3));
+}
+
+/* Flag Animation Styles */
+.hero-flags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+  gap: 19px;
+}
+
+.flag-group {
+  display: flex;
+  gap: 18px;
+}
+
+.left-flags {
+  animation: moveToLeft 1.5s ease-out forwards;
+   
+}
+
+.right-flags {
+  animation: moveToRight 1.5s ease-out forwards;
+}
+
+.left-flags .flag,
+.right-flags .flag {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Added subtle scale effect on hover */
+  transition: transform 0.3s ease;
+}
+
+.flag:hover {
+  transform: scale(1.1);
+}
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .flag {
+    width: 30px;
+    height: 30px;
+  }
+
+  .flag-group {
+    gap: 10px;
+  }
 }
 
 .hero .hero-bg::before {
@@ -975,7 +1062,6 @@ section,
   z-index: 2;
   background: linear-gradient(148deg, rgba(24, 170, 158, 0.5) 1%, rgba(255, 255, 255, 0.5) 75%);
 }
-
 
 .hero .container {
   position: relative;
@@ -999,10 +1085,13 @@ section,
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(0.9px);
   border-radius: 15px;
+  white-space: nowrap;
 }
 
 .hero h1 span {
   color: var(--nav-dropdown-hover-color);
+  white-space: nowrap;
+  /* width: 100%; */
   /* font-size: 58px; */
 }
 
@@ -1049,8 +1138,8 @@ section,
   color: var(--nav-color);
   background: color-mix(in srgb, var(--accent-color), transparent 78%);
   border-color: color-mix(in srgb, var(--default-color), transparent 20%);
-  backdrop-filter: blur(0.9px);
-  -webkit-backdrop-filter: blur(0.9px);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 15px;
@@ -1076,12 +1165,13 @@ section,
 
 @media (max-width: 640px) {
   .hero h1 {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 36px;
   }
 
   .hero p {
     font-size: 18px;
+    font-weight: 400;
     line-height: 24px;
     margin-bottom: 30px;
   }
@@ -1624,6 +1714,12 @@ section,
   .pricing .box {
     max-width: 80%;
     margin: 0 auto 30px auto;
+  }
+}
+
+@media (max-width:500px) {
+  .price-Enterprise .price-Enterprise-section {
+    flex-direction: column;
   }
 }
 
