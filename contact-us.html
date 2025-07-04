@@ -132,41 +132,36 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="400">
+            <form id="contact-form" class="contct-sec-form" data-aos="fade-up" data-aos-delay="400">
               <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="fname" class="form-control" placeholder="Frist Name" required="">
-                </div>
-                <div class="col-md-6">
-                  <input type="text" name="lname" class="form-control" placeholder="Last Name" required="">
-                </div>
-                <div class="col-md-6 ">
-                  <input type="tel" class="form-control" name="contact" placeholder="Your Contact" required="">
-                </div>
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name"
+                    required>
                 </div>
-
+                <div class="col-md-6">
+                  <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="Your Contact" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                </div>
+                <div class="col-md-12">
+                  <textarea id="message" name="message" class="form-control" rows="6" placeholder="Message"
+                    required></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                  <div id="loading-alert" class="alert alert-info d-none">Sending message...</div>
+                  <div id="error-alert" class="alert alert-danger d-none"><span id="error-text"></span></div>
+                  <div id="success-alert" class="alert alert-success d-none">Your message has been sent. Thank you!
+                  </div>
+                  <button id="submit-btn" type="submit">Send Message</button>
                 </div>
-
               </div>
             </form>
+
           </div><!-- End Contact Form -->
 
         </div>
@@ -265,6 +260,122 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    let config = {};
+
+    fetch('./assets/json/config.json')
+      .then(res => res.json())
+      .then(json => {
+        config = json.configApi || {};
+        console.log('config:',config)
+      })
+      .catch(err => console.error('Failed to load config:', err));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-form');
+      const submitBtn = document.getElementById('submit-btn');
+      const loadingAlert = document.getElementById('loading-alert');
+      const errorAlert = document.getElementById('error-alert');
+      const successAlert = document.getElementById('success-alert');
+      const errorText = document.getElementById('error-text');
+
+      const showAlert = (element, message = '') => {
+        [loadingAlert, errorAlert, successAlert].forEach(alert => alert.classList.add('d-none'));
+        if (message) errorText.textContent = message;
+        element.classList.remove('d-none');
+      };
+
+      const validateForm = () => {
+        let valid = true;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+        const fields = ['fullname', 'email', 'mobile', 'subject', 'message'];
+
+        fields.forEach(id => {
+          const input = document.getElementById(id);
+          input.classList.remove('is-invalid', 'is-valid');
+          const value = input.value.trim();
+
+          if (!value) {
+            input.classList.add('is-invalid');
+            valid = false;
+            showAlert(errorAlert, 'Please fill in all required fields.');
+          } else if (id === 'email' && !emailRegex.test(value)) {
+            input.classList.add('is-invalid');
+            valid = false;
+            showAlert(errorAlert, 'Please enter a valid email address.');
+          } else if (id === 'mobile' && !phoneRegex.test(value.replace(/[\s\-()]/g, ''))) {
+            input.classList.add('is-invalid');
+            valid = false;
+            showAlert(errorAlert, 'Please enter a valid phone number.');
+          } else {
+            input.classList.add('is-valid');
+          }
+        });
+
+        return valid;
+      };
+
+      form.addEventListener('input', e => {
+        if (e.target.matches('input, textarea')) {
+          e.target.classList.remove('is-invalid', 'is-valid');
+          [loadingAlert, errorAlert, successAlert].forEach(alert => alert.classList.add('d-none'));
+        }
+      });
+
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+
+        if (!validateForm()) return;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
+        showAlert(loadingAlert);
+
+        const formData = {
+          fullname: document.getElementById('fullname').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          mobile: document.getElementById('mobile').value.trim(),
+          subject: document.getElementById('subject').value.trim(),
+          message: document.getElementById('message').value.trim()
+        };
+
+        try {
+          const response = await fetch(`${config}/contact/`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+          });
+
+          if (!response.ok) {
+            let errorData = {};
+            try {
+              errorData = await response.json();
+            } catch (_) { }
+            throw new Error(errorData.message || `Server error: ${response.status}`);
+          }
+
+          // Parse only if content-length is not 0
+          const contentLength = response.headers.get('content-length');
+          if (contentLength && parseInt(contentLength) > 0) {
+            await response.json();
+          }
+
+          showAlert(successAlert);
+          form.reset();
+          form.querySelectorAll('.is-valid').forEach(el => el.classList.remove('is-valid'));
+        } catch (error) {
+          showAlert(errorAlert, error.message.includes('Failed to fetch')
+            ? 'Unable to connect to server. Please ensure the backend is running.'
+            : `Error: ${error.message}`);
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Send Message';
+        }
+      });
+    });
+  </script>
 
 </body>
 
