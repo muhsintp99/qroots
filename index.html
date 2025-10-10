@@ -11,7 +11,8 @@
     content="medical career coaching, medical job preparation, healthcare career guidance, interview training for medical students, resume building for doctors, medical job consultancy, medical career support, healthcare job placement, MBBS interview preparation, career counseling for medical graduates">
 
   <!-- Favicons -->
-  <link href="assets/img/logo/PNGs/Asset 10.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="icon">
+
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -39,8 +40,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/logo/PNGs/logosid.png" alt="">
-        <!-- <h1 class="sitename">Roots</h1> -->
+        <img src="assets/img/logo/PNGs/favicon.png" alt="">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -49,23 +49,17 @@
           <li><a href="./about-us.html">About</a></li>
           <li><a href="./service-details.html">Services</a></li>
           <li><a href="./blog.html">Blog</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
           <li><a href="./contact-us.html">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>  
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getlogin" href="https://qroots-frontend.vercel.app/login"><i class="bi bi-person-circle fs-4"
-          style="font-size: 1rem;"></i></a>
-      <a class="btn-getstarted" href="https://qroots-frontend.vercel.app/JobApplication">Apply Now <i class="bi bi-arrow-right-circle-fill ms-2 fs-4"
-          style="font-size: 1rem;"></i></a>
+      <a class="btn-getlogin" href="http://localhost:2020/login">
+        <i class="bi bi-person-circle fs-4"></i>
+        <span class="login-text">
+          <small>Already a Customer?</small> <strong>Login Here</strong>
+        </span>
+      </a>
 
     </div>
   </header>
@@ -81,6 +75,7 @@
         <div class="d-flex flex-column justify-content-center align-items-center">
           <p class="hero-core">"We are rooted, You to grow"</p>
           <h1 data-aos="fade-up fw-bold">Prepare for Your Medical Consulting Career with <span>Q Roots</span></h1>
+
           <!-- <div class="hero-flags">
               <div class="flag-group left-flags">
                 <img src="assets/img/flags/sq/finland.png" alt="Finland" class="flag" />
@@ -93,18 +88,36 @@
                 <img src="assets/img/flags/sq/united-states.png" alt="UK" class="flag" />
               </div>
             </div> -->
-            
+
           <div class="hero-content d-flex justify-content-center flex-column align-items-center w-100">
 
             <p data-aos="fade-up" data-aos-delay="100">Personalized job preparation and expert consultation for medical
               students and future professionals.<br></p>
-            <div class="d-flex gap-3 mb-3 flex-column flex-sm-row flex-lg-row" data-aos="fade-up" data-aos-delay="200">
+            <!-- <div class="d-flex gap-3 mb-3 flex-column flex-sm-row flex-lg-row" data-aos="fade-up" data-aos-delay="200">
               <a href="#about" class="btn-get-started">Who we are</a>
               <a href="#about" class="btn-get-started-1">Explore Services <i
                   class="bi bi-arrow-right-circle-fill"></i></a>
+            </div> -->
+
+
+            <div data-aos="fade-up" data-aos-delay="100"
+              class="role-select d-flex justify-content-center align-items-center gap-4 mt-3">
+              <div class="role-option text-center">
+                <p class="mb-1">Looking For<br><span> Opportunities ..?</span></p>
+                <a href="./enquiriesCandidate.html"
+                  class="btn-role fw-bold d-flex justify-content-center align-items-center">I'm a Seeker <i
+                    class="bi bi-arrow-right-circle-fill fs-5 ms-1"></i> </a>
+              </div>
+              <div class="divider mx-2"></div>
+              <div class="role-option text-center">
+                <p class="mb-1">Looking To<br> <span>Hire Or Enroll ..?</span></p>
+                <a href="./enquiriesEmployer.html"
+                  class="btn-role fw-bold d-flex justify-content-center align-items-center">I'm a Provider <i
+                    class="bi bi-arrow-right-circle-fill fs-5 ms-1"></i> </a>
+              </div>
             </div>
-            
-            <div class="hero-from mt-2">
+
+            <!-- <div class="hero-from mt-2">
               <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
                 data-aos-delay="400">
                 <div class="row gy-4">
@@ -136,8 +149,8 @@
 
                 </div>
               </form>
-            </div><!-- End Contact Form -->
-
+            </div> -->
+            <!-- End Contact Form -->
           </div>
         </div>
       </div>
@@ -145,7 +158,7 @@
 
     </section><!-- /Hero Section -->
 
-    <!-- Clients Section -->
+    <!-- 
     <section id="clients" class="clients section">
 
       <div class="container" data-aos="fade-up">
@@ -154,33 +167,33 @@
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
             <img src="assets/img/flags/sq/finland.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
             <img src="assets/img/flags/sq/flag.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
             <img src="assets/img/flags/sq/germany.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
             <img src="assets/img/flags/sq/india.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
             <img src="assets/img/flags/sq/united-kingdom.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>
 
           <div class="col-xl-2 col-md-3 col-6 client-logo">
             <img src="assets/img/flags/sq/united-states.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Clients Section -->
+    </section>-->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -253,10 +266,10 @@
                 <p>Personalized coaching, mock interviews, and scenario-based practice to help you
                   crack your next medical job interview.</p>
               </div>
-              <div class="mt-3 stretched-link">
+              <!-- <div class="mt-3 stretched-link">
                 <a href="./service-details.html#interview-prep" class="read-more w-100">Learn More <i
                     class="bi bi-arrow-right-circle-fill"></i></a>
-              </div>
+              </div> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -271,10 +284,10 @@
                 <p>One-on-one sessions to help you plan your career path — whether you're a new student or coming from
                   another institute.</p>
               </div>
-              <div class="mt-3 stretched-link">
+              <!-- <div class="mt-3 stretched-link">
                 <a href="./service-details.html#career-consult" class="read-more w-100">Learn More <i
                     class="bi bi-arrow-right-circle-fill"></i></a>
-              </div>
+              </div> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -289,10 +302,10 @@
                 <p>Support for final-year students and fresh graduates to smoothly transition from academics to
                   professional roles.</p>
               </div>
-              <div class="mt-3 stretched-link">
+              <!-- <div class="mt-3 stretched-link">
                 <a href="./service-details.html#job-transition" class="read-more w-100">Learn More <i
                     class="bi bi-arrow-right-circle-fill"></i></a>
-              </div>
+              </div> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -307,10 +320,10 @@
                 <p>Create a standout, ATS-friendly medical CV highlighting your training, skills, and achievements for
                   job placement success.</p>
               </div>
-              <div class="mt-3 stretched-link">
+              <!-- <div class="mt-3 stretched-link">
                 <a href="./service-details.html#cv-building" class="read-more w-100">Learn More <i
                     class="bi bi-arrow-right-circle-fill"></i></a>
-              </div>
+              </div> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -325,10 +338,10 @@
                 <p>Improve your soft skills, patient interaction, and professional communication for interviews and
                   clinical roles.</p>
               </div>
-              <div class="mt-3 stretched-link">
+              <!-- <div class="mt-3 stretched-link">
                 <a href="service-details.html#communication" class="read-more w-100">Learn More <i
                     class="bi bi-arrow-right-circle-fill"></i></a>
-              </div>
+              </div> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -339,8 +352,8 @@
                 <p class="text-center">Explore more detailed information about all the services we offer to help you
                   advance in your medical career.</p>
               </div>
-              <div class="mt-3 stretched-link">
-                <a href="./service-details.html" class="read-more w-100">Explore More <i
+              <div class="mt-3 link">
+                <a href="./contact-us.html" class="read-more w-100">Explore More <i
                     class="bi bi-arrow-right-circle-fill"></i></a>
               </div>
             </div>
@@ -485,14 +498,14 @@
           <div class="d-flex justify-content-center align-items-center gap-4 price-Enterprise-section">
             <p class="m-0">
               Perfect for enterprises with advanced needs. <br>
-              <a href="mailto:Hello@Ledgerbooks.App"
-                class="text-decoration-none  text-black fw-bold">Hello@QRootInternational.com</a> /
+              <a href="mailto:hello@qrootsinternational.com"
+                class="text-decoration-none  text-black fw-bold">hello@qrootsinternational.com</a> /
               <a href="tel:+97334685036" class="text-decoration-none text-black fw-bold">34685036</a>
             </p>
 
-            <a href="#" class="cta-btn">
+            <!-- <a href="#" class="cta-btn">
               Enterprise Plan <i class="bi bi-arrow-right ms-1"></i>
-            </a>
+            </a> -->
           </div>
         </div>
 
@@ -762,8 +775,8 @@
           <div class="footer-contact pt-3">
             <p>Q Roots International W.L.L</p>
             <p>Yateem Center, Second Floor, Suite H1, Manama Center, Kingdom of Bahrain</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+973 346 85036</span></p>
+            <p><strong>Email:</strong> <span>hello@qrootsinternational.com</span></p>
           </div>
 
         </div>

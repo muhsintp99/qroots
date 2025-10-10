@@ -156,7 +156,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 40px;
+  max-height: 60px;
   margin-right: 8px;
 }
 
@@ -177,7 +177,7 @@ h6 {
   }
 
   .header .logo img {
-    max-height: 38px;
+    max-height: 45px;
   }
 
   .header .logo h1 {
@@ -193,7 +193,7 @@ h6 {
   font-size: 16px;
   padding: 5px 16px;
   margin: 0 0 0 20px;
-  border-radius: 50px;
+  border-radius: 15px;
   transition: 0.3s;
   display: flex;
   align-items: center;
@@ -220,6 +220,7 @@ h6 {
     margin: 0 15px 0 0;
     padding: 6px 15px;
   }
+
   .header .btn-getlogin {
     order: 2;
     margin: 0 15px 0 0;
@@ -231,32 +232,60 @@ h6 {
   }
 }
 
+@media (max-width: 580px) {
+  .header .btn-getstarted {
+    display: none;
+  }
+}
+
+
 /* ------------------------------------------------------ */
 .header .btn-getlogin,
 .header .btn-getlogin:focus {
   color: var(--nav-color);
-  /* background: var(--accent-color); */
   background: color-mix(in srgb, var(--accent-color), transparent 50%);
-  /* font-size: 16px; */
   padding: 5px 12px;
-  margin: 0 0 0 30px;
-  border-radius: 50px;
+  margin: 0 15px 0 30px;
+  border-radius: 15px;
   transition: 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  gap: 8px;
+  /* space between icon and text */
+  text-decoration: none;
 }
 
 .header .btn-getlogin i,
 .header .btn-getlogin i:focus {
   color: var(--nav-color);
+  font-size: 1rem;
 }
 
 .header .btn-getlogin:hover,
 .header .btn-getlogin:focus:hover {
   color: var(--background-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+/* Style for the text */
+.btn-getlogin .login-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+}
+
+.btn-getlogin .login-text small {
+  font-size: 10px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.btn-getlogin .login-text strong {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
 }
 
 /* ------------------------------------------------------ */
@@ -432,7 +461,7 @@ h6 {
 }
 
 /* Mobile Navigation */
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -453,6 +482,7 @@ h6 {
     position: absolute;
     inset: 60px 20px 20px 20px;
     padding: 10px 0;
+
     margin: 0;
     border-radius: 6px;
     background-color: var(--nav-mobile-background-color);
@@ -995,7 +1025,7 @@ section,
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 140px 0 40px 0;
+  padding: 120px 0 40px 0;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1011,6 +1041,7 @@ section,
   z-index: 1;
   /* Added drop shadow to the image */
   filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.3));
+  opacity: 0.5;
 }
 
 /* Flag Animation Styles */
@@ -1032,7 +1063,7 @@ section,
 
 .left-flags {
   animation: moveToLeft 1.5s ease-out forwards;
-   
+
 }
 
 .right-flags {
@@ -1090,6 +1121,8 @@ section,
   }
 }
 
+
+
 .hero .hero-bg::before {
   content: "";
   position: absolute;
@@ -1131,22 +1164,29 @@ section,
 }
 
 .hero-content {
-  background: color-mix(in srgb, var(--accent-color), transparent 78%);
+  /* background: color-mix(in srgb, var(--accent-color), transparent 78%); */
   border-color: color-mix(in srgb, var(--default-color), transparent 20%);
-  backdrop-filter: blur(1.5px);
-  -webkit-backdrop-filter: blur(0.9px);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: blur(1.5px); */
+  /* -webkit-backdrop-filter: blur(0.9px); */
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); */
   padding: 30px;
+  padding-top: 0px;
   border-radius: 15px;
   margin-top: 20px;
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: px 0 20px 0;
   font-size: 16px;
   font-weight: 400;
-  max-width: 450px;
+  */
+  max-width: 490px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  border-radius: 15px;
+
 }
 
 @media (min-width: 768px) {
@@ -1154,6 +1194,81 @@ section,
     max-width: 600px;
   }
 }
+
+/* Role Select Section Styles */
+.role-select {
+  margin-top: 20px;
+}
+
+.role-option p {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--heading-color);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.role-option p span {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--heading-color);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.btn-role {
+  color: var(--nav-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+
+
+
+  /* display: inline-block;
+  margin-top: 6px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--nav-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 50%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 30%);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, transform 0.2s; */
+}
+
+.btn-role:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--background-color);
+  transform: scale(1.05);
+}
+
+.divider {
+  width: 1px;
+  background: color-mix(in srgb, var(--default-color), transparent 50%);
+  height: 60px;
+}
+
+@media (max-width: 576px) {
+  .role-select {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
 
 .hero .btn-get-started {
   color: var(--nav-color);
