@@ -33,6 +33,9 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 
@@ -74,40 +77,256 @@
             <div class="hero-bg">
                 <img src="assets/img/layear/bg.svg" alt="">
             </div>
-            <div class="container text-center">
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <p class="hero-core">"We are rooted, You to grow"</p>
-                    <h1 data-aos="fade-up fw-bold">Prepare for Your Medical Consulting Career with <span>Q Roots</span>
-                    </h1>
 
 
+            
+<div class="container-fluid">
+      <div class="col-12 text-center">
+            <h2>Join the Q Roots Global Network </h2>
+          </div>
+          
+        <div class="row">
+            <div class="col-12">
+                <section id="q-roots-form-section">
+                    <div class="q-roots-container">
+                        <div class="background-waves">
+                            <svg viewBox="0 0 1200 800" preserveAspectRatio="none">
+                                <path d="M0,400 Q300,300 600,400 T1200,400 L1200,800 L0,800 Z" fill="#0f766e" opacity="0.1"/>
+                                <path d="M0,500 Q300,400 600,500 T1200,500 L1200,800 L0,800 Z" fill="#0f766e" opacity="0.1"/>
+                            </svg>
+                        </div>
 
-                    <div class="hero-content d-flex justify-content-center flex-column align-items-center w-100">
+                        <div class="content">
 
-                        <p data-aos="fade-up" data-aos-delay="100">Personalized job preparation and expert consultation
-                            for medical
-                            students and future professionals.<br></p>
-
-                        <div data-aos="fade-up" data-aos-delay="100"
-                            class="role-select d-flex justify-content-center align-items-center gap-4 mt-3">
-                            <div class="role-option text-center">
-                                <p class="mb-1">Looking For<br><span> Opportunities ..?</span></p>
-                                <a href="http://localhost:2020/EnquiryForm"
-                                    class="btn-role fw-bold d-flex justify-content-center align-items-center">I'm a
-                                    Seeker <i class="bi bi-arrow-right-circle-fill fs-5 ms-1"></i> </a>
+                            <div class="step-indicator">
+                                <div class="step-item">
+                                    <div class="step-circle active">1</div>
+                                    <span class="step-label active">Personal Details</span>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-circle inactive">2</div>
+                                    <span class="step-label inactive">Goal</span>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-circle inactive">3</div>
+                                    <span class="step-label inactive">Position</span>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-circle inactive">4</div>
+                                    <span class="step-label inactive">Submission</span>
+                                </div>
                             </div>
-                            <div class="divider mx-2"></div>
-                            <div class="role-option text-center">
-                                <p class="mb-1">Looking To<br> <span>Hire Or Enroll ..?</span></p>
-                                <a href="http://localhost:2020/EnquiryForm"
-                                    class="btn-role fw-bold d-flex justify-content-center align-items-center">I'm a
-                                    Provider <i class="bi bi-arrow-right-circle-fill fs-5 ms-1"></i> </a>
-                            </div>
+
+                            <form id="qRootsForm" class="needs-validation" novalidate>
+                                <!-- Step 1: Personal Details -->
+                                <div class="form-section active" id="step1">
+                                    <h2>Personal Details</h2>
+                                    
+                                    <div class="mb-3">
+                                        <label for="fullName" class="form-label">
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Full Name*
+                                        </label>
+                                        <input type="text" class="form-control" id="fullName" placeholder="Enter Your Full Name" required>
+                                        <div class="invalid-feedback">Please enter your full name.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                            </svg>
+                                            Email ID*
+                                        </label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email ID" required>
+                                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                            </svg>
+                                            Phone Number*
+                                        </label>
+                                        <div class="phone-wrapper">
+                                            <div class="country-code">
+                                                <span style="font-size: 24px;">🇮🇳</span>
+                                                <span>+91</span>
+                                            </div>
+                                            <input type="tel" class="form-control" id="phone" placeholder="Enter Your Phone Number" pattern="[0-9]{10}" required>
+                                        </div>
+                                        <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label">
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Address*
+                                        </label>
+                                        <input type="text" class="form-control" id="address" placeholder="Enter Your Address" required>
+                                        <div class="invalid-feedback">Please enter your address.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Current Status*
+                                        </label>
+                                        <input type="text" class="form-control" id="statusDisplay" placeholder="Select Your Current Status" readonly>
+                                        <input type="hidden" id="currentStatus" required>
+                                        <div class="button-group" id="statusGroup">
+                                            <button type="button" class="btn-option" data-value="Student">Student</button>
+                                            <button type="button" class="btn-option" data-value="Graduate">Graduate</button>
+                                            <button type="button" class="btn-option" data-value="Job Seeker">Job Seeker</button>
+                                            <button type="button" class="btn-option" data-value="Professional">Professional</button>
+                                        </div>
+                                        <div class="invalid-feedback d-block" id="statusError" style="display: none !important;"></div>
+                                    </div>
+
+                                    <div class="navigation">
+                                        <button type="button" class="btn btn-secondary" onclick="clearAll()">Clear All</button>
+                                        <div class="nav-buttons">
+                                            <button type="button" class="btn btn-primary" onclick="nextStep()">Continue</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 2: Goal -->
+                                <div class="form-section" id="step2">
+                                    <h2>Your Goals with Q Roots</h2>
+                                    
+                                    <div class="mb-3">
+                                        <label class="form-label">
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Your Goal*
+                                        </label>
+                                        <input type="text" class="form-control" id="goalDisplay" placeholder="Select Your Goal" readonly>
+                                        <input type="hidden" id="goal" required>
+                                        <div class="button-group" id="goalGroup">
+                                            <button type="button" class="btn-option" data-value="Enter Healthcare Career">Enter Healthcare Career</button>
+                                            <button type="button" class="btn-option" data-value="Job Placement (Abroad)">Job Placement (Abroad)</button>
+                                            <button type="button" class="btn-option" data-value="Training & Certifications">Training & Certifications</button>
+                                            <button type="button" class="btn-option" data-value="Internship / Clinical Placement">Internship / Clinical Placement</button>
+                                            <button type="button" class="btn-option" data-value="Leadership / AI Growth">Leadership / AI Growth</button>
+                                        </div>
+                                        <div class="invalid-feedback d-block" id="goalError" style="display: none !important;"></div>
+                                    </div>
+
+                                    <div class="navigation">
+                                        <button type="button" class="btn btn-secondary" onclick="prevStep()">
+                                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                            </svg>
+                                            Back
+                                        </button>
+                                        <button type="button" class="btn btn-primary" onclick="nextStep()">Continue for Confirmation</button>
+                                    </div>
+                                </div>
+
+                                <!-- Step 3: Position -->
+                                <div class="form-section" id="step3">
+                                    <h2>Position</h2>
+                                    
+                                    <div class="mb-3">
+                                        <label class="form-label">
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                                            </svg>
+                                            Educational Qualification*
+                                        </label>
+                                        <input type="text" class="form-control" id="educationDisplay" placeholder="Select Your Qualification" readonly>
+                                        <input type="hidden" id="education" required>
+                                        <div class="button-group" id="educationGroup">
+                                            <button type="button" class="btn-option" data-value="Plus Two">Plus Two</button>
+                                            <button type="button" class="btn-option" data-value="Graduate">Graduate</button>
+                                            <button type="button" class="btn-option" data-value="Postgraduate">Postgraduate</button>
+                                            <button type="button" class="btn-option" data-value="Professional License">Professional License</button>
+                                        </div>
+                                        <div class="invalid-feedback d-block" id="educationError" style="display: none !important;"></div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+                                            </svg>
+                                            Work Experience*
+                                        </label>
+                                        <input type="text" class="form-control" id="experienceDisplay" placeholder="Select Your Work Experience" readonly>
+                                        <input type="hidden" id="workExperience" required>
+                                        <div class="button-group" id="experienceGroup">
+                                            <button type="button" class="btn-option" data-value="0-1 year">0 - 1 year</button>
+                                            <button type="button" class="btn-option" data-value="1-3 years">1 - 3 years</button>
+                                            <button type="button" class="btn-option" data-value="3+ years">3+ years</button>
+                                            <button type="button" class="btn-option" data-value="Not yet working">Not yet working</button>
+                                        </div>
+                                        <div class="invalid-feedback d-block" id="experienceError" style="display: none !important;"></div>
+                                    </div>
+
+                                    <div class="navigation">
+                                        <button type="button" class="btn btn-secondary" onclick="prevStep()">
+                                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                            </svg>
+                                            Back
+                                        </button>
+                                        <button type="button" class="btn btn-primary" onclick="nextStep()">Continue for Confirmation</button>
+                                    </div>
+                                </div>
+
+                                <!-- Step 4: Submission -->
+                                <div class="form-section" id="step4">
+                                    <h2>Review & Submit</h2>
+                                    <div class="summary">
+                                        <h3>Your Information</h3>
+                                        <p><strong>Full Name:</strong> <span id="summaryFullName"></span></p>
+                                        <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+                                        <p><strong>Phone:</strong> <span id="summaryPhone"></span></p>
+                                        <p><strong>Address:</strong> <span id="summaryAddress"></span></p>
+                                        <p><strong>Current Status:</strong> <span id="summaryStatus"></span></p>
+                                        <p><strong>Goal:</strong> <span id="summaryGoal"></span></p>
+                                        <p><strong>Educational Qualification:</strong> <span id="summaryEducation"></span></p>
+                                        <p><strong>Work Experience:</strong> <span id="summaryExperience"></span></p>
+                                    </div>
+                                    <div class="form-check mb-4 text-center">
+                                        <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                        <label class="form-check-label" for="agreeTerms" style="color: #115e59; font-weight: 500; font-size: 16px;">
+                                            I agree for Q Roots to guide and connect me with international opportunities.
+                                        </label>
+                                        <div class="invalid-feedback">You must agree before submitting.</div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-submit">
+                                        Submit & Join the Global Network
+                                    </button>
+                                    <div class="navigation" style="justify-content: flex-start; margin-top: 24px;">
+                                        <button type="button" class="btn btn-secondary" onclick="prevStep()">
+                                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                            </svg>
+                                            Back
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
+        </div>
+    </div>
 
+            
 
         </section><!-- /Hero Section -->
 
@@ -198,14 +417,543 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+    <!-- Toastify JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    
+    <script>
+    // ========================================
+    // FORM FUNCTIONALITY
+    // ========================================
+
+    // Global variables
+    let currentStep = 1;
+    const completedSteps = [];
+    let config = {};
+
+    /**
+     * Load configuration from config.json
+     */
+    function loadConfig() {
+      return fetch('./assets/json/config.json')
+        .then(res => {
+          if (!res.ok) {
+            throw new Error('Failed to load config.json');
+          }
+          return res.json();
+        })
+        .then(json => {
+          config.baseUrl = json.configApi || '';
+          console.log('Config Loaded:', config);
+        })
+        .catch(err => {
+          console.error('Failed to load config:', err);
+          // Continue without API if config fails
+          console.warn('Form will work without API integration');
+        });
+    }
+
+    /**
+     * Validation rules for each form field
+     */
+    const validationRules = {
+      step1: {
+        fullName: { 
+          required: true, 
+          minLength: 2, 
+          message: 'Full name is required (min 2 characters)' 
+        },
+        email: { 
+          required: true, 
+          type: 'email', 
+          pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+          message: 'Please provide a valid email address' 
+        },
+        phone: { 
+          required: true, 
+          pattern: /^[0-9]{10}$/, 
+          emptyMessage: 'Please enter your phone number',
+          invalidMessage: 'Please enter a valid 10-digit phone number'
+        },
+        address: { 
+          required: true, 
+          minLength: 5, 
+          message: 'Address is required (min 5 characters)' 
+        },
+        currentStatus: { 
+          required: true, 
+          message: 'Please select your current status' 
+        }
+      },
+      step2: {
+        goal: { 
+          required: true, 
+          message: 'Please select your goal' 
+        }
+      },
+      step3: {
+        education: { 
+          required: true, 
+          message: 'Please select your educational qualification' 
+        },
+        workExperience: { 
+          required: true, 
+          message: 'Please select your work experience' 
+        }
+      }
+    };
+
+    /**
+     * Validate individual field
+     */
+    function validateField(fieldId, rules) {
+      const field = document.getElementById(fieldId);
+      if (!field) return true;
+
+      const rule = rules[fieldId];
+      if (!rule) return true;
+
+      const value = field.value.trim();
+      let isValid = true;
+      let errorMessage = '';
+
+      // Special handling for phone field
+      if (fieldId === 'phone') {
+        if (rule.required && !value) {
+          isValid = false;
+          errorMessage = rule.emptyMessage || 'Please enter your phone number';
+        } else if (value && rule.pattern && !rule.pattern.test(value)) {
+          isValid = false;
+          errorMessage = rule.invalidMessage || 'Please enter a valid 10-digit phone number';
+        }
+      } 
+      // Standard validation for other fields
+      else if (rule.required && !value) {
+        isValid = false;
+        errorMessage = rule.message;
+      } else if (rule.type === 'email' && value) {
+        if (rule.pattern && !rule.pattern.test(value)) {
+          isValid = false;
+          errorMessage = rule.message;
+        }
+      } else if (rule.pattern && value && !rule.pattern.test(value)) {
+        isValid = false;
+        errorMessage = rule.message;
+      } else if (rule.minLength && value.length < rule.minLength) {
+        isValid = false;
+        errorMessage = rule.message;
+      }
+
+      // Update UI
+      if (!isValid) {
+        field.classList.add('is-invalid');
+        field.classList.remove('is-valid');
+        
+        // For phone field, find the feedback element that's outside the wrapper
+        let feedbackEl;
+        if (fieldId === 'phone') {
+          feedbackEl = field.parentElement.parentElement.querySelector('.invalid-feedback');
+        } else {
+          feedbackEl = field.parentElement.querySelector('.invalid-feedback');
+        }
+        
+        if (feedbackEl) {
+          feedbackEl.textContent = errorMessage;
+          feedbackEl.style.display = 'block';
+        }
+      } else {
+        field.classList.remove('is-invalid');
+        field.classList.add('is-valid');
+        
+        // For phone field, find the feedback element that's outside the wrapper
+        let feedbackEl;
+        if (fieldId === 'phone') {
+          feedbackEl = field.parentElement.parentElement.querySelector('.invalid-feedback');
+        } else {
+          feedbackEl = field.parentElement.querySelector('.invalid-feedback');
+        }
+        
+        if (feedbackEl) {
+          feedbackEl.style.display = 'none';
+        }
+      }
+
+      return isValid;
+    }
+
+    /**
+     * Initialize button groups for option selection
+     */
+    function initButtonGroups() {
+      const groups = [
+        { groupId: 'statusGroup', inputId: 'currentStatus', errorId: 'statusError', displayId: 'statusDisplay' },
+        { groupId: 'goalGroup', inputId: 'goal', errorId: 'goalError', displayId: 'goalDisplay' },
+        { groupId: 'educationGroup', inputId: 'education', errorId: 'educationError', displayId: 'educationDisplay' },
+        { groupId: 'experienceGroup', inputId: 'workExperience', errorId: 'experienceError', displayId: 'experienceDisplay' }
+      ];
+
+      groups.forEach(({ groupId, inputId, errorId, displayId }) => {
+        const group = document.getElementById(groupId);
+        if (!group) return;
+
+        group.querySelectorAll('.btn-option').forEach(btn => {
+          btn.addEventListener('click', function() {
+            // Remove selected class from all buttons in group
+            group.querySelectorAll('.btn-option').forEach(b => b.classList.remove('selected'));
+            
+            // Add selected class to clicked button
+            this.classList.add('selected');
+            
+            // Update hidden and display inputs
+            const value = this.getAttribute('data-value');
+            document.getElementById(inputId).value = value;
+            if (displayId) {
+              const displayField = document.getElementById(displayId);
+              if (displayField) {
+                displayField.value = value;
+              }
+            }
+            
+            // Hide error message
+            const errorEl = document.getElementById(errorId);
+            if (errorEl) {
+              errorEl.style.display = 'none';
+            }
+
+            // Validate field
+            const stepRules = currentStep === 1 ? validationRules.step1 :
+                             currentStep === 2 ? validationRules.step2 :
+                             validationRules.step3;
+            validateField(inputId, stepRules);
+          });
+        });
+      });
+    }
+
+    /**
+     * Update step indicator UI
+     */
+    function updateStepIndicator() {
+      document.querySelectorAll('.step-item').forEach((item, index) => {
+        const step = index + 1;
+        const circle = item.querySelector('.step-circle');
+        const label = item.querySelector('.step-label');
+        
+        circle.classList.remove('active', 'inactive', 'completed');
+        label.classList.remove('active', 'inactive', 'completed');
+        
+        if (completedSteps.includes(step)) {
+          circle.classList.add('completed');
+          label.classList.add('completed');
+        } else if (step === currentStep) {
+          circle.classList.add('active');
+          label.classList.add('active');
+        } else {
+          circle.classList.add('inactive');
+          label.classList.add('inactive');
+        }
+      });
+    }
+
+    /**
+     * Navigate to specific step
+     */
+    function goToStep(step) {
+      document.querySelectorAll('.form-section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById('step' + step).classList.add('active');
+      currentStep = step;
+      updateStepIndicator();
+
+      // Update summary on step 4
+      if (step === 4) {
+        document.getElementById('summaryFullName').textContent = document.getElementById('fullName').value || 'Not provided';
+        document.getElementById('summaryEmail').textContent = document.getElementById('email').value || 'Not provided';
+        document.getElementById('summaryPhone').textContent = '+91 ' + document.getElementById('phone').value || 'Not provided';
+        document.getElementById('summaryAddress').textContent = document.getElementById('address').value || 'Not provided';
+        document.getElementById('summaryStatus').textContent = document.getElementById('currentStatus').value || 'Not provided';
+        document.getElementById('summaryGoal').textContent = document.getElementById('goal').value || 'Not provided';
+        document.getElementById('summaryEducation').textContent = document.getElementById('education').value || 'Not provided';
+        document.getElementById('summaryExperience').textContent = document.getElementById('workExperience').value || 'Not provided';
+      }
+    }
+
+    /**
+     * Validate current step
+     */
+    function validateStep(step) {
+      const stepRules = step === 1 ? validationRules.step1 :
+                       step === 2 ? validationRules.step2 :
+                       validationRules.step3;
+      
+      let isValid = true;
+
+      for (const fieldId in stepRules) {
+        if (!validateField(fieldId, stepRules)) {
+          isValid = false;
+        }
+      }
+
+      return isValid;
+    }
+
+    /**
+     * Move to next step
+     */
+    function nextStep() {
+      if (!validateStep(currentStep)) {
+        return;
+      }
+
+      if (!completedSteps.includes(currentStep)) {
+        completedSteps.push(currentStep);
+      }
+
+      if (currentStep < 4) {
+        currentStep++;
+        goToStep(currentStep);
+      }
+    }
+
+    /**
+     * Move to previous step
+     */
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        goToStep(currentStep);
+      }
+    }
+
+    /**
+     * Clear all form data
+     */
+    function clearAll() {
+      const form = document.getElementById('qRootsForm');
+      form.reset();
+      form.classList.remove('was-validated');
+      
+      // Clear all validation classes
+      form.querySelectorAll('.is-valid, .is-invalid').forEach(el => {
+        el.classList.remove('is-valid', 'is-invalid');
+      });
+
+      // Clear button selections
+      document.querySelectorAll('.btn-option').forEach(btn => btn.classList.remove('selected'));
+
+      // Hide all error messages
+      document.querySelectorAll('[id$="Error"]').forEach(err => err.style.display = 'none');
+
+      // Clear hidden fields
+      ['currentStatus', 'goal', 'education', 'workExperience'].forEach(id => {
+        const field = document.getElementById(id);
+        if (field) field.value = '';
+      });
+
+      // Clear display fields
+      ['statusDisplay', 'goalDisplay', 'educationDisplay', 'experienceDisplay'].forEach(id => {
+        const field = document.getElementById(id);
+        if (field) field.value = '';
+      });
+
+      // Reset agreeTerms checkbox
+      const agreeTerms = document.getElementById('agreeTerms');
+      if (agreeTerms) agreeTerms.checked = false;
+
+      // Reset steps
+      completedSteps.length = 0;
+      currentStep = 1;
+      goToStep(1);
+    }
+
+    /**
+     * Show Toastify alert
+     */
+    function showAlert(type, message) {
+      let background = '';
+      if (type === 'success') {
+        background = 'linear-gradient(to right, #00b09b, #96c93d)';
+      } else if (type === 'danger') {
+        background = 'linear-gradient(to right, #ff5f6d, #ffc371)';
+      }
+
+      Toastify({
+        text: message,
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        style: {
+          background: background
+        },
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        onClick: function(){} // Callback after click
+      }).showToast();
+    }
+
+    /**
+     * Submit form data to API
+     */
+    function submitFormData(formData) {
+      const submitBtn = document.querySelector('.btn-submit');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...'; // Simple loading state
+
+      if (!config.baseUrl) {
+        console.warn('API endpoint not configured. Form data:', formData);
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit & Join the Global Network';
+        }, 1000);
+        showAlert('success', 'Form submitted successfully! (Demo mode - no API configured)');
+        return Promise.resolve();
+      }
+
+      const apiUrl = `${config.baseUrl}/candidate-enquiries`;
+      
+      return axios.post(apiUrl, formData)
+        .then(response => {
+          console.log('API Response:', response);
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit & Join the Global Network';
+          }, 1000);
+          return response;
+        })
+        .catch(error => {
+          console.error('API Error:', error);
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit & Join the Global Network';
+          }, 1000);
+          // Check for validation errors specifically
+          if (error.response?.status === 400) {
+            showAlert('danger', 'Validation error. Please check your inputs and try again.');
+          } else {
+            showAlert('danger', 'Failed to submit form. Please try again or contact support.');
+          }
+          throw error;
+        });
+    }
+
+    /**
+     * Initialize form functionality
+     */
+    function initializeForm() {
+      const form = document.getElementById('qRootsForm');
+      if (!form) return;
+
+      // Initialize button groups
+      initButtonGroups();
+
+      // Real-time validation for text inputs
+      ['fullName', 'email', 'phone', 'address'].forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+          field.addEventListener('blur', function() {
+            validateField(fieldId, validationRules.step1);
+          });
+          field.addEventListener('input', function() {
+            // Remove non-numeric characters for phone field
+            if (fieldId === 'phone') {
+              this.value = this.value.replace(/[^0-9]/g, '');
+              // Limit to 10 digits
+              if (this.value.length > 10) {
+                this.value = this.value.slice(0, 10);
+              }
+            }
+            
+            if (this.classList.contains('is-invalid')) {
+              validateField(fieldId, validationRules.step1);
+            }
+          });
+        }
+      });
+
+      // Form submission
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const agreeTerms = document.getElementById('agreeTerms');
+        if (!agreeTerms.checked) {
+          agreeTerms.classList.add('is-invalid');
+          showAlert('danger', 'Please agree to the terms before submitting.');
+          return;
+        } else {
+          agreeTerms.classList.remove('is-invalid');
+        }
+
+        // Collect form data
+        const formData = {
+          fullName: document.getElementById('fullName').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          phoneNumber: document.getElementById('phone').value.trim(),
+          address: document.getElementById('address').value.trim(),
+          currentStatus: document.getElementById('currentStatus').value,
+          goal: document.getElementById('goal').value,
+          educationalQualification: document.getElementById('education').value,
+          workExperience: document.getElementById('workExperience').value,
+          agreement: agreeTerms.checked
+        };
+
+        // Validate all fields one last time before submit
+        let allValid = true;
+        Object.keys(validationRules).forEach(stepKey => {
+          Object.keys(validationRules[stepKey]).forEach(fieldId => {
+            if (!validateField(fieldId, validationRules[stepKey])) {
+              allValid = false;
+            }
+          });
+        });
+        
+        if (!allValid) {
+          showAlert('danger', 'Please fix all errors before submitting.');
+          return;
+        }
+
+        // Mark step 4 as completed
+        if (!completedSteps.includes(4)) {
+          completedSteps.push(4);
+        }
+        updateStepIndicator();
+
+        // Submit to API
+        submitFormData(formData)
+          .then(() => {
+            showAlert('success', 'Form submitted successfully! Thank you for joining Q Roots Global Network.');
+            // Reset form after 3 seconds (to allow reading the alert)
+            setTimeout(() => {
+              clearAll();
+            }, 3000);
+          })
+          .catch(error => {
+            // Error already handled in submitFormData
+          });
+      });
+
+      // Initialize step indicator
+      updateStepIndicator();
+    }
+
+    /**
+     * Initialize everything on page load
+     */
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load config first, then initialize form
+      loadConfig().finally(() => {
+        initializeForm();
+      });
+    });
+    </script>
 
 </body>
 

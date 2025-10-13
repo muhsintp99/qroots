@@ -4,18 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Hire Qualified Medical Professionals & Healthcare Talent – Q Roots</title>
+  <title>Medical Job Opportunities for Employers – Q Roots</title>
   <meta name="description"
-    content="Looking to hire skilled medical professionals? Q Roots connects hospitals, clinics, and recruiters with qualified candidates through expert screening and placement services." />
+    content="Looking for medical job opportunities or career coaching? Q Roots helps students and healthcare professionals with interview preparation, resume building, and global job placement support." />
   <meta name="keywords"
-    content="hire medical professionals, healthcare recruitment, doctor hiring agency, medical job provider, hospital staffing solutions, recruit healthcare staff, medical consultancy, medical talent acquisition, healthcare recruitment agency, medical job placement service" />
-  <meta property="og:title" content="Hire Qualified Medical Professionals & Healthcare Talent – Q Roots" />
+    content="medical job opportunities, healthcare jobs, medical student career guidance, doctor job placement, MBBS interview preparation, resume building for doctors, healthcare career coaching, overseas medical jobs, medical recruitment for students, medical job consultancy" />
+  <meta property="og:title" content="Medical Job Opportunities & Career Guidance for Students – Q Roots" />
   <meta property="og:description"
-    content="Partner with Q Roots to recruit experienced and verified medical professionals. We help employers find the best talent in healthcare." />
+    content="Explore top healthcare job openings and get expert career guidance. Q Roots supports medical students and graduates in achieving global career success." />
   <meta property="og:image" content="https://qroots.in/assets/img/logo/PNGs/Asset%2010.png" />
   <meta property="og:type" content="website" />
-
   <meta property="og:url" content="https://www.qrootsinternational.com/" />
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -35,83 +33,11 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- Inline CSS for the form -->
-  <style>
-    .multi-step-form {
-      background: rgba(255, 255, 255, 0.8);
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .form-title {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .progress-steps {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px;
-    }
-    .step-indicator {
-      background: #dee2e6;
-      color: #495057;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-size: 0.9rem;
-    }
-    .step-indicator.active {
-      background: #0d6efd;
-      color: white;
-    }
-    .form-group {
-      margin-bottom: 20px;
-      text-align: left;
-    }
-    .form-group label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 5px;
-    }
-    .form-group input, .form-group select {
-      width: 100%;
-      padding: 10px;
-      border-radius: 20px;
-      border: 1px solid #ced4da;
-    }
-    .phone-input {
-      display: flex;
-    }
-    .phone-input select {
-      width: auto;
-      margin-right: 10px;
-    }
-    .status-buttons, .goal-buttons, .qual-buttons, .exp-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .form-buttons {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-    }
-    .d-none {
-      display: none;
-    }
-    .is-invalid {
-      border-color: red !important;
-    }
-    .invalid-feedback {
-      color: red;
-      font-size: 0.875em;
-      margin-top: 0.25rem;
-    }
-  </style>
-
 </head>
 
 <body class="index-page">
@@ -145,141 +71,210 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
     <section id="hero" class="hero section">
       <div class="hero-bg">
         <img src="assets/img/layear/bg.svg" alt="">
       </div>
-      <div class="container text-center Enq-from-candidate">
-        <div class="multi-step-form">
-          <h2 class="form-title">Join the Q Roots Global Network</h2>
-          <div class="progress-steps">
-            <div class="step-indicator active">1 Personal Details</div>
-            <div class="step-indicator">2 Goal</div>
-            <div class="step-indicator">3 Position</div>
-            <div class="step-indicator">4 Submission</div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <section id="q-roots-form-section">
+              <div class="q-roots-container">
+                <div class="background-waves">
+                  <svg viewBox="0 0 1200 800" preserveAspectRatio="none">
+                    <path d="M0,400 Q300,300 600,400 T1200,400 L1200,800 L0,800 Z" fill="#0f766e" opacity="0.1"/>
+                    <path d="M0,500 Q300,400 600,500 T1200,500 L1200,800 L0,800 Z" fill="#0f766e" opacity="0.1"/>
+                  </svg>
+                </div>
+                <div class="content">
+
+                  <!-- Step Indicators -->
+                  <div class="step-indicator">
+                    <div class="step-item">
+                      <div class="step-circle active">1</div>
+                      <span class="step-label active">Personal Details</span>
+                    </div>
+                    <div class="step-item">
+                      <div class="step-circle inactive">2</div>
+                      <span class="step-label inactive">Organization Info</span>
+                    </div>
+                    <div class="step-item">
+                      <div class="step-circle inactive">3</div>
+                      <span class="step-label inactive">Submission</span>
+                    </div>
+                  </div>
+
+                  <!-- Form Start -->
+                  <form id="qRootsForm" class="needs-validation" novalidate>
+
+                    <!-- Step 1 -->
+                    <div class="form-section active" id="step1">
+                      <h2>Personal Details</h2>
+
+                      <div class="mb-3">
+                        <label for="fullName" class="form-label">
+                          <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                          </svg>
+                          Full Name*
+                        </label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter Your Full Name"
+                          required>
+                        <div class="invalid-feedback">Please enter your full name (min 2 characters).</div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="email" class="form-label">
+                          <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                          </svg>
+                          Email ID*
+                        </label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email ID" required>
+                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="phone" class="form-label">
+                          <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                          </svg>
+                          Phone Number*
+                        </label>
+                        <div class="phone-wrapper d-flex">
+                          <div class="country-code me-2">
+                            <span style="font-size: 24px;">🇮🇳</span>
+                            <span>+91</span>
+                          </div>
+                          <input type="tel" class="form-control" id="phone" placeholder="Enter Your Phone Number" pattern="[0-9]{10}" required>
+                        </div>
+                        <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="whatsapp" class="form-label">WhatsApp Number*</label>
+                        <div class="phone-wrapper d-flex">
+                          <div class="country-code me-2">
+                            <span style="font-size: 24px;">🇮🇳</span>
+                            <span>+91</span>
+                          </div>
+                          <input type="tel" class="form-control" id="whatsapp" placeholder="Enter WhatsApp Number" pattern="[0-9]{10}" required>
+                        </div>
+                        <div class="invalid-feedback">Please enter a valid 10-digit WhatsApp number.</div>
+                      </div>
+
+                      <div class="navigation">
+                        <button type="button" class="btn btn-secondary" onclick="clearAll()">Clear All</button>
+                        <div class="nav-buttons">
+                          <button type="button" class="btn btn-primary" onclick="nextStep()">Continue</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="form-section" id="step2">
+                      <h2>Organization Info</h2>
+
+                      <div class="mb-3">
+                        <label for="organizationName" class="form-label">
+                          <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                          </svg>
+                          Organization Name*
+                        </label>
+                        <input type="text" class="form-control" id="organizationName"
+                          placeholder="Enter Organization Name" required>
+                        <div class="invalid-feedback">Please enter your organization name (min 2 characters).</div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="organizationAddress" class="form-label">Organization Address*</label>
+                        <input type="text" class="form-control" id="organizationAddress"
+                          placeholder="Enter Organization Address" required>
+                        <div class="invalid-feedback">Please enter your organization address (min 5 characters).</div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="spocName" class="form-label">
+                          <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                          </svg>
+                          SPOC (Single Point of Contact) Name*
+                        </label>
+                        <input type="text" class="form-control" id="spocName" placeholder="Enter SPOC Name" required>
+                        <div class="invalid-feedback">Please enter SPOC name (min 2 characters).</div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="spocContact" class="form-label">SPOC Contact*</label>
+                        <input type="tel" class="form-control" id="spocContact" placeholder="Enter SPOC Contact Number"
+                          pattern="[0-9]{10}" required>
+                        <div class="invalid-feedback">Please enter a valid 10-digit SPOC contact number.</div>
+                      </div>
+
+                      <div class="navigation">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">
+                          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                          </svg>
+                          Back
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()">Continue for
+                          Confirmation</button>
+                      </div>
+                    </div>
+
+                    <!-- Step 3: Submission -->
+                    <div class="form-section" id="step3">
+                      <h2>Review & Submit</h2>
+
+                      <div class="summary">
+                        <h3>Your Information</h3>
+                        <p><strong>Full Name:</strong> <span id="summaryFullName"></span></p>
+                        <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+                        <p><strong>Phone:</strong> <span id="summaryPhone"></span></p>
+                        <p><strong>WhatsApp:</strong> <span id="summaryWhatsapp"></span></p>
+                        <p><strong>Organization Name:</strong> <span id="summaryOrganization"></span></p>
+                        <p><strong>Organization Address:</strong> <span id="summaryOrgAddress"></span></p>
+                        <p><strong>SPOC Name:</strong> <span id="summarySpocName"></span></p>
+                        <p><strong>SPOC Contact:</strong> <span id="summarySpocContact"></span></p>
+                      </div>
+
+                      <div class="form-check mb-4 text-center"
+                        style="display:flex; align-items:center; justify-content:center; gap:8px;">
+                        <input class="form-check-input" type="checkbox" id="agreeTerms" required
+                          style="margin:0; width:18px; height:18px;">
+                        <label class="form-check-label" for="agreeTerms"
+                          style="margin:0; color:#115e59; font-weight:500; line-height:1.5;">
+                          I agree for Q Roots to guide and connect me with international opportunities.
+                        </label>
+                        <div class="invalid-feedback">You must agree before submitting.</div>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary btn-submit">Submit & Join the Global Network</button>
+
+                      <div class="navigation mt-4" style="justify-content: flex-start;">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">
+                          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                          </svg>
+                          Back
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
           </div>
-
-          <form id="candidateForm">
-            <!-- Step 1: Personal Details -->
-            <div class="step" id="step1">
-              <h3>Personal Details</h3>
-              <div class="form-group">
-                <label for="fullName"><i class="bi bi-person"></i> Full Name*</label>
-                <input type="text" id="fullName" placeholder="Enter Your Full Name" required>
-                <div class="invalid-feedback">Full name is required.</div>
-              </div>
-              <div class="form-group">
-                <label for="email"><i class="bi bi-envelope"></i> Email ID*</label>
-                <input type="email" id="email" placeholder="Enter Your Email ID" required>
-                <div class="invalid-feedback">Valid email is required.</div>
-              </div>
-              <div class="form-group">
-                <label for="phone"><i class="bi bi-telephone"></i> Phone Number*</label>
-                <div class="phone-input">
-                  <select id="countryCode">
-                    <option>🇮🇳 +91</option>
-                    <!-- Add other countries if needed -->
-                  </select>
-                  <input type="tel" id="phone" placeholder="Enter Your Phone Number" required>
-                </div>
-                <div class="invalid-feedback">Phone number is required and must be valid.</div>
-              </div>
-              <div class="form-group">
-                <label for="address"><i class="bi bi-house"></i> Address</label>
-                <input type="text" id="address" placeholder="Enter Your Address">
-              </div>
-              <div class="form-group">
-                <label><i class="bi bi-info-circle"></i> Current Status</label>
-                <div class="status-buttons">
-                  <button type="button" class="btn btn-outline-primary">Student</button>
-                  <button type="button" class="btn btn-outline-primary">Graduate</button>
-                  <button type="button" class="btn btn-outline-primary">Job Seeker</button>
-                  <button type="button" class="btn btn-outline-primary">Professional</button>
-                </div>
-                <div class="invalid-feedback">Please select your current status.</div>
-              </div>
-              <div class="form-buttons">
-                <button type="button" class="btn btn-secondary clear-all">Clear All</button>
-                <button type="button" class="btn btn-primary save">Save</button>
-                <button type="button" class="btn btn-primary next-step">Continue</button>
-              </div>
-            </div>
-
-            <!-- Step 2: Goal -->
-            <div class="step d-none" id="step2">
-              <h3>Your Goals with Q Roots</h3>
-              <div class="form-group">
-                <label>Select Your Goal :</label>
-                <div class="goal-buttons">
-                  <button type="button" class="btn btn-outline-primary">Enter Healthcare Career</button>
-                  <button type="button" class="btn btn-outline-primary">Job Placement (Abroad)</button>
-                  <button type="button" class="btn btn-outline-primary">Training & Certifications</button>
-                  <button type="button" class="btn btn-outline-primary">Internship / Clinical Placement</button>
-                  <button type="button" class="btn btn-outline-primary">Leadership / AI Growth</button>
-                </div>
-                <div class="invalid-feedback">Please select at least one goal.</div>
-              </div>
-              <div class="form-buttons">
-                <button type="button" class="btn btn-secondary prev-step">Back</button>
-                <button type="button" class="btn btn-primary next-step">Continue for Confirmation</button>
-              </div>
-            </div>
-
-            <!-- Step 3: Position -->
-            <div class="step d-none" id="step3">
-              <h3>Position</h3>
-              <div class="form-group">
-                <label><i class="bi bi-mortarboard"></i> Educational Qualification</label>
-                <div class="qual-buttons">
-                  <button type="button" class="btn btn-outline-primary">Plus Two</button>
-                  <button type="button" class="btn btn-outline-primary">Graduate</button>
-                  <button type="button" class="btn btn-outline-primary">Postgraduate</button>
-                  <button type="button" class="btn btn-outline-primary">Professional License</button>
-                </div>
-                <div class="invalid-feedback">Please select your educational qualification.</div>
-              </div>
-              <div class="form-group">
-                <label><i class="bi bi-briefcase"></i> Work Experience</label>
-                <div class="exp-buttons">
-                  <button type="button" class="btn btn-outline-primary">0-1 year</button>
-                  <button type="button" class="btn btn-outline-primary">1-3 years</button>
-                  <button type="button" class="btn btn-outline-primary">3+ years</button>
-                  <button type="button" class="btn btn-outline-primary">Not yet working</button>
-                </div>
-                <div class="invalid-feedback">Please select your work experience.</div>
-              </div>
-              <div class="form-buttons">
-                <button type="button" class="btn btn-secondary prev-step">Back</button>
-                <button type="button" class="btn btn-primary next-step">Continue for Confirmation</button>
-              </div>
-            </div>
-
-            <!-- Step 4: Submission -->
-            <div class="step d-none" id="step4">
-              <div class="form-group">
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="agreement" required>
-                  <label class="form-check-label" for="agreement">I agree for Q Roots to guide and connect me with international opportunities.</label>
-                  <div class="invalid-feedback">You must agree to proceed.</div>
-                </div>
-              </div>
-              <div class="form-buttons">
-                <button type="button" class="btn btn-secondary prev-step">Back</button>
-                <button type="submit" class="btn btn-primary">Submit & Join the Global Network</button>
-              </div>
-            </div>
-          </form>
         </div>
       </div>
-
-
-    </section><!-- /Hero Section -->
-
+    </section>
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
-
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
@@ -292,7 +287,6 @@
             <p class="mt-3"><strong>Phone:</strong> <span>+973 346 85036</span></p>
             <p><strong>Email:</strong> <span>hello@qrootsinternational.com</span></p>
           </div>
-
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
@@ -307,7 +301,6 @@
             <li><a href="#">Sitemap</a></li>
           </ul>
         </div>
-
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
@@ -330,7 +323,6 @@
             <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -341,7 +333,6 @@
         Designed by <a href="#">Bloombiz</a> Dist
       </div>
     </div>
-
   </footer>
 
   <a href="#" id="scroll-top-btn" class="scroll-top d-flex align-items-center justify-content-center"
@@ -363,135 +354,477 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+  <!-- Toastify JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- Inline JS for the form -->
+  
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const steps = document.querySelectorAll('.step');
-      const stepIndicators = document.querySelectorAll('.step-indicator');
-      const nextButtons = document.querySelectorAll('.next-step');
-      const prevButtons = document.querySelectorAll('.prev-step');
-      const clearAllButton = document.querySelector('.clear-all');
-      const saveButton = document.querySelector('.save');
-      const form = document.getElementById('candidateForm');
-      let currentStep = 0;
+    // ========================================
+    // FORM FUNCTIONALITY
+    // ========================================
 
-      function showStep(stepIndex) {
-        steps.forEach((step, index) => {
-          step.classList.toggle('d-none', index !== stepIndex);
+    // Global variables
+    let currentStep = 1;
+    const totalSteps = 3;
+    const completedSteps = [];
+    let config = {};
+
+    /**
+     * Load configuration from config.json
+     */
+    function loadConfig() {
+      return fetch('./assets/json/config.json')
+        .then(res => {
+          if (!res.ok) {
+            throw new Error('Failed to load config.json');
+          }
+          return res.json();
+        })
+        .then(json => {
+          config.baseUrl = json.configApi || '';
+          console.log('Config Loaded:', config);
+        })
+        .catch(err => {
+          console.error('Failed to load config:', err);
+          // Continue without API if config fails
+          console.warn('Form will work without API integration');
         });
-        stepIndicators.forEach((indicator, index) => {
-          indicator.classList.toggle('active', index === stepIndex);
-        });
-        currentStep = stepIndex;
+    }
+
+    /**
+     * Validation rules for each form field
+     */
+    const validationRules = {
+      step1: {
+        fullName: { 
+          required: true, 
+          minLength: 2, 
+          message: 'Full name is required (min 2 characters)' 
+        },
+        email: { 
+          required: true, 
+          type: 'email', 
+          pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 
+          message: 'Please provide a valid email address' 
+        },
+        phone: { 
+          required: true, 
+          pattern: /^[0-9]{10}$/, 
+          emptyMessage: 'Please enter your phone number',
+          invalidMessage: 'Please enter a valid 10-digit phone number'
+        },
+        whatsapp: { 
+          required: true, 
+          pattern: /^[0-9]{10}$/, 
+          emptyMessage: 'Please enter your WhatsApp number',
+          invalidMessage: 'Please enter a valid 10-digit WhatsApp number'
+        }
+      },
+      step2: {
+        organizationName: { 
+          required: true, 
+          minLength: 2, 
+          message: 'Organization name is required (min 2 characters)' 
+        },
+        organizationAddress: { 
+          required: true, 
+          minLength: 5, 
+          message: 'Organization address is required (min 5 characters)' 
+        },
+        spocName: { 
+          required: true, 
+          minLength: 2, 
+          message: 'SPOC name is required (min 2 characters)' 
+        },
+        spocContact: { 
+          required: true, 
+          pattern: /^[0-9]{10}$/, 
+          emptyMessage: 'Please enter SPOC contact number',
+          invalidMessage: 'Please enter a valid 10-digit SPOC contact number'
+        }
+      }
+    };
+
+    /**
+     * Validate individual field
+     */
+    function validateField(fieldId, rules) {
+      const field = document.getElementById(fieldId);
+      if (!field) return true;
+
+      const rule = rules[fieldId];
+      if (!rule) return true;
+
+      const value = field.value.trim();
+      let isValid = true;
+      let errorMessage = '';
+
+      // Special handling for phone fields
+      if (['phone', 'whatsapp', 'spocContact'].includes(fieldId)) {
+        if (rule.required && !value) {
+          isValid = false;
+          errorMessage = rule.emptyMessage || 'Please enter your phone number';
+        } else if (value && rule.pattern && !rule.pattern.test(value)) {
+          isValid = false;
+          errorMessage = rule.invalidMessage || 'Please enter a valid 10-digit phone number';
+        }
+      } 
+      // Standard validation for other fields
+      else if (rule.required && !value) {
+        isValid = false;
+        errorMessage = rule.message;
+      } else if (rule.type === 'email' && value) {
+        if (rule.pattern && !rule.pattern.test(value)) {
+          isValid = false;
+          errorMessage = rule.message;
+        }
+      } else if (rule.pattern && value && !rule.pattern.test(value)) {
+        isValid = false;
+        errorMessage = rule.message;
+      } else if (rule.minLength && value.length < rule.minLength) {
+        isValid = false;
+        errorMessage = rule.message;
       }
 
-      function validateStep(stepIndex) {
-        let valid = true;
-        const currentStepElem = steps[stepIndex];
-        const inputs = currentStepElem.querySelectorAll('input[required], select[required]');
-        const buttonGroups = currentStepElem.querySelectorAll('.status-buttons, .goal-buttons, .qual-buttons, .exp-buttons');
+      // Update UI
+      if (!isValid) {
+        field.classList.add('is-invalid');
+        field.classList.remove('is-valid');
+        
+        // For phone fields, find the feedback element that's outside the wrapper
+        let feedbackEl;
+        if (['phone', 'whatsapp'].includes(fieldId)) {
+          feedbackEl = field.parentElement.parentElement.querySelector('.invalid-feedback');
+        } else {
+          feedbackEl = field.parentElement.querySelector('.invalid-feedback');
+        }
+        
+        if (feedbackEl) {
+          feedbackEl.textContent = errorMessage;
+          feedbackEl.style.display = 'block';
+        }
+      } else {
+        field.classList.remove('is-invalid');
+        field.classList.add('is-valid');
+        
+        // For phone fields, find the feedback element that's outside the wrapper
+        let feedbackEl;
+        if (['phone', 'whatsapp'].includes(fieldId)) {
+          feedbackEl = field.parentElement.parentElement.querySelector('.invalid-feedback');
+        } else {
+          feedbackEl = field.parentElement.querySelector('.invalid-feedback');
+        }
+        
+        if (feedbackEl) {
+          feedbackEl.style.display = 'none';
+        }
+      }
 
-        // Reset invalid classes
-        inputs.forEach(input => input.classList.remove('is-invalid'));
-        buttonGroups.forEach(group => group.nextElementSibling.classList.add('d-none'));
+      return isValid;
+    }
 
-        // Validate text/email/tel/checkbox inputs
-        inputs.forEach(input => {
-          if (input.type === 'checkbox') {
-            if (!input.checked) {
-              input.classList.add('is-invalid');
-              input.nextElementSibling.nextElementSibling.classList.remove('d-none'); // For checkbox feedback
-              valid = false;
-            }
-          } else if (!input.value.trim()) {
-            input.classList.add('is-invalid');
-            valid = false;
-          } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
-            input.classList.add('is-invalid');
-            valid = false;
-          } else if (input.type === 'tel' && !/^\d{7,15}$/.test(input.value)) { // Simple phone validation: 7-15 digits
-            input.classList.add('is-invalid');
-            valid = false;
-          }
-        });
+    /**
+     * Update step indicator UI
+     */
+    function updateStepIndicator() {
+      document.querySelectorAll('.step-item').forEach((item, index) => {
+        const step = index + 1;
+        const circle = item.querySelector('.step-circle');
+        const label = item.querySelector('.step-label');
+        
+        circle.classList.remove('active', 'inactive', 'completed');
+        label.classList.remove('active', 'inactive', 'completed');
+        
+        if (completedSteps.includes(step)) {
+          circle.classList.add('completed');
+          label.classList.add('completed');
+        } else if (step === currentStep) {
+          circle.classList.add('active');
+          label.classList.add('active');
+        } else {
+          circle.classList.add('inactive');
+          label.classList.add('inactive');
+        }
+      });
+    }
 
-        // Validate button groups (at least one active)
-        buttonGroups.forEach(group => {
-          const activeButtons = group.querySelectorAll('button.active');
-          if (activeButtons.length === 0) {
-            group.nextElementSibling.classList.remove('d-none'); // Show feedback
-            valid = false;
+    function showStep(step) {
+      document.querySelectorAll('.form-section').forEach((section, index) => {
+        section.classList.toggle('active', index === step - 1);
+      });
+
+      currentStep = step;
+      updateStepIndicator();
+    }
+
+    /**
+     * Validate current step
+     */
+    function validateCurrentStep() {
+      const stepRules = currentStep === 1 ? validationRules.step1 : validationRules.step2;
+      
+      let isValid = true;
+
+      for (const fieldId in stepRules) {
+        if (!validateField(fieldId, stepRules)) {
+          isValid = false;
+        }
+      }
+
+      return isValid;
+    }
+
+    function nextStep() {
+      if (!validateCurrentStep()) {
+        return;
+      }
+
+      if (!completedSteps.includes(currentStep)) {
+        completedSteps.push(currentStep);
+      }
+
+      if (currentStep < totalSteps) {
+        currentStep++;
+        if (currentStep === totalSteps) fillSummary();
+        showStep(currentStep);
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    }
+
+    function clearAll() {
+      const form = document.getElementById("qRootsForm");
+      form.reset();
+      form.classList.remove('was-validated');
+      
+      // Clear all validation classes
+      form.querySelectorAll('.is-valid, .is-invalid').forEach(el => {
+        el.classList.remove('is-valid', 'is-invalid');
+      });
+
+      // Hide all error messages
+      form.querySelectorAll('.invalid-feedback').forEach(fb => fb.style.display = 'none');
+
+      // Reset agreeTerms checkbox
+      const agreeTerms = document.getElementById('agreeTerms');
+      if (agreeTerms) agreeTerms.checked = false;
+
+      // Reset steps
+      completedSteps.length = 0;
+      currentStep = 1;
+      showStep(1);
+    }
+
+    function fillSummary() {
+      document.getElementById("summaryFullName").textContent = document.getElementById("fullName").value || 'Not provided';
+      document.getElementById("summaryEmail").textContent = document.getElementById("email").value || 'Not provided';
+      document.getElementById("summaryPhone").textContent = '+91 ' + document.getElementById("phone").value || 'Not provided';
+      document.getElementById("summaryWhatsapp").textContent = '+91 ' + document.getElementById("whatsapp").value || 'Not provided';
+      document.getElementById("summaryOrganization").textContent = document.getElementById("organizationName").value || 'Not provided';
+      document.getElementById("summaryOrgAddress").textContent = document.getElementById("organizationAddress").value || 'Not provided';
+      document.getElementById("summarySpocName").textContent = document.getElementById("spocName").value || 'Not provided';
+      document.getElementById("summarySpocContact").textContent = '+91 ' + document.getElementById("spocContact").value || 'Not provided';
+    }
+
+    /**
+     * Show Toastify alert
+     */
+    function showAlert(type, message) {
+      let background = '';
+      if (type === 'success') {
+        background = 'linear-gradient(to right, #00b09b, #96c93d)';
+      } else if (type === 'danger') {
+        background = 'linear-gradient(to right, #ff5f6d, #ffc371)';
+      }
+
+      Toastify({
+        text: message,
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        style: {
+          background: background
+        },
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        onClick: function(){} // Callback after click
+      }).showToast();
+    }
+
+    /**
+     * Submit form data to API
+     */
+    function submitFormData(formData) {
+      const submitBtn = document.querySelector('.btn-submit');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...'; // Simple loading state
+
+      if (!config.baseUrl) {
+        console.warn('API endpoint not configured. Form data:', formData);
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit & Join the Global Network';
+        }, 1000);
+        showAlert('success', 'Form submitted successfully! (Demo mode - no API configured)');
+        return Promise.resolve();
+      }
+
+      const apiUrl = `${config.baseUrl}/employer-enquiries`;
+      
+      return axios.post(apiUrl, formData)
+        .then(response => {
+          console.log('API Response:', response);
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit & Join the Global Network';
+          }, 1000);
+          return response;
+        })
+        .catch(error => {
+          console.error('API Error:', error);
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit & Join the Global Network';
+          }, 1000);
+          // Check for validation errors specifically
+          if (error.response?.status === 400) {
+            showAlert('danger', 'Validation error. Please check your inputs and try again.');
           } else {
-            group.nextElementSibling.classList.add('d-none');
+            showAlert('danger', 'Failed to submit form. Please try again or contact support.');
           }
+          throw error;
         });
+    }
 
-        return valid;
-      }
+    /**
+     * Initialize form functionality
+     */
+    function initializeForm() {
+      const form = document.getElementById("qRootsForm");
+      if (!form) return;
 
-      nextButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          if (validateStep(currentStep) && currentStep < steps.length - 1) {
-            showStep(currentStep + 1);
-          }
-        });
-      });
-
-      prevButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          if (currentStep > 0) {
-            showStep(currentStep - 1);
-          }
-        });
-      });
-
-      // Clear All button for step 1
-      if (clearAllButton) {
-        clearAllButton.addEventListener('click', () => {
-          const step1 = steps[0];
-          step1.querySelectorAll('input').forEach(input => input.value = '');
-          step1.querySelectorAll('button.active').forEach(btn => btn.classList.remove('active'));
-        });
-      }
-
-      // Save button (placeholder, could store to localStorage or alert)
-      if (saveButton) {
-        saveButton.addEventListener('click', () => {
-          if (validateStep(0)) {
-            alert('Details saved!');
-            // Optionally, implement saving logic here
-          }
-        });
-      }
-
-      // Handle form submission
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        if (validateStep(3)) { // Validate last step
-          alert('Form submitted successfully!');
-          // Add actual submission logic here, e.g., send data to server
+      // Real-time validation for text inputs
+      ['fullName', 'email', 'organizationName', 'organizationAddress', 'spocName'].forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+          field.addEventListener('blur', function() {
+            const stepRules = fieldId.startsWith('spoc') || fieldId === 'organizationName' || fieldId === 'organizationAddress' ? validationRules.step2 : validationRules.step1;
+            validateField(fieldId, stepRules);
+          });
+          field.addEventListener('input', function() {
+            if (this.classList.contains('is-invalid')) {
+              const stepRules = fieldId.startsWith('spoc') || fieldId === 'organizationName' || fieldId === 'organizationAddress' ? validationRules.step2 : validationRules.step1;
+              validateField(fieldId, stepRules);
+            }
+          });
         }
       });
 
-      // Handle button selections (toggle active class, allow single selection per group)
-      const buttonGroups = document.querySelectorAll('.status-buttons, .goal-buttons, .qual-buttons, .exp-buttons');
-      buttonGroups.forEach(group => {
-        group.addEventListener('click', function(e) {
-          if (e.target.tagName === 'BUTTON') {
-            const buttons = group.querySelectorAll('button');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            e.target.classList.add('active');
-          }
+      // Phone fields input handling
+      const phoneFields = ['phone', 'whatsapp', 'spocContact'];
+      phoneFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+          field.addEventListener('input', function () {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 10) this.value = this.value.slice(0, 10);
+            const stepRules = fieldId === 'spocContact' ? validationRules.step2 : validationRules.step1;
+            validateField(fieldId, stepRules);
+          });
+          field.addEventListener('blur', function() { 
+            const stepRules = fieldId === 'spocContact' ? validationRules.step2 : validationRules.step1;
+            validateField(fieldId, stepRules); 
+          });
+        }
+      });
+
+      // Form submission
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const agreeTerms = document.getElementById("agreeTerms");
+        if (!agreeTerms.checked) {
+          agreeTerms.classList.add('is-invalid');
+          showAlert('danger', 'Please agree to the terms before submitting.');
+          return;
+        } else {
+          agreeTerms.classList.remove('is-invalid');
+        }
+
+        // Collect form data
+        const formData = {
+          fullName: document.getElementById("fullName").value.trim(),
+          email: document.getElementById("email").value.trim(),
+          contactNumber: document.getElementById("phone").value.trim(),
+          whatsappNumber: document.getElementById("whatsapp").value.trim(),
+          organizationName: document.getElementById("organizationName").value.trim(),
+          organizationAddress: document.getElementById("organizationAddress").value.trim(),
+          spocName: document.getElementById("spocName").value.trim(),
+          spocContact: document.getElementById("spocContact").value.trim(),
+          agreement: agreeTerms.checked
+        };
+
+        // Validate all fields one last time before submit
+        let allValid = true;
+        Object.keys(validationRules).forEach(stepKey => {
+          Object.keys(validationRules[stepKey]).forEach(fieldId => {
+            if (!validateField(fieldId, validationRules[stepKey])) {
+              allValid = false;
+            }
+          });
         });
+        
+        if (!allValid) {
+          showAlert('danger', 'Please fix all errors before submitting.');
+          return;
+        }
+
+        // Mark step 3 as completed
+        if (!completedSteps.includes(3)) {
+          completedSteps.push(3);
+        }
+        updateStepIndicator();
+
+        // Submit to API
+        submitFormData(formData)
+          .then(() => {
+            showAlert('success', 'Form submitted successfully! Thank you for joining Q Roots Global Network.');
+            // Reset form after 3 seconds (to allow reading the alert)
+            setTimeout(() => {
+              clearAll();
+            }, 3000);
+          })
+          .catch(error => {
+            // Error already handled in submitFormData
+          });
+      });
+
+      // Initialize step indicator
+      updateStepIndicator();
+    }
+
+    /**
+     * Initialize everything on page load
+     */
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load config first, then initialize form
+      loadConfig().finally(() => {
+        initializeForm();
       });
     });
   </script>
