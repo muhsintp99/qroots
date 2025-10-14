@@ -1,7 +1,3 @@
 {
-  "configApi": "https://api.qrootsinternational.com"
+  "configApi": "http://localhost:2022"
 }
-
-
-
-
