@@ -692,6 +692,9 @@
 
       const apiUrl = `${config.baseUrl}/employer-enquiries`;
 
+      console.log("Enq Employer API :", apiUrl);
+
+
       return axios.post(apiUrl, formData)
         .then(response => {
           console.log('API Response:', response);
